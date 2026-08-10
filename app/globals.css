@@ -161,19 +161,11 @@ a:focus-visible > .arrow {
 
 .hero h2 {
   max-width: 43rem;
-  margin: clamp(2rem, 4vw, 3.5rem) 0 0;
-  font-size: clamp(1.75rem, 3vw, 3.15rem);
+  margin: clamp(1.75rem, 3vw, 2.75rem) 0 0;
+  font-size: clamp(1.35rem, 2.1vw, 2.25rem);
   font-weight: 560;
-  letter-spacing: -0.04em;
-  line-height: 1.03;
-}
-
-.hero-copy > p {
-  max-width: 38rem;
-  margin: 1.5rem 0 0;
-  color: var(--muted);
-  font-size: clamp(1rem, 1.4vw, 1.2rem);
-  line-height: 1.58;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
 }
 
 .hero-actions {
@@ -211,8 +203,15 @@ a:focus-visible > .arrow {
   min-width: 0;
 }
 
-.hero-visual--index {
+.hero-portrait {
   aspect-ratio: 4 / 5;
+  margin: 0;
+  transform: translate(-1.25rem, -1.25rem) scale(1.12);
+  transform-origin: center;
+}
+
+.hero-portrait__image {
+  object-fit: contain;
 }
 
 .hero-project-index {
@@ -872,8 +871,9 @@ a:focus-visible > .arrow {
   }
 
   .hero h2 {
-    margin-top: 2.2rem;
-    font-size: clamp(1.8rem, 8vw, 2.6rem);
+    margin-top: 1.75rem;
+    font-size: clamp(1.35rem, 5.8vw, 1.8rem);
+    line-height: 1.16;
   }
 
   .hero-visual {
@@ -881,8 +881,10 @@ a:focus-visible > .arrow {
     margin: 4rem auto 0;
   }
 
-  .hero-visual--index {
-    display: none;
+  .hero-portrait {
+    width: min(84vw, 25rem);
+    margin-top: 3rem;
+    transform: none;
   }
 
   .hero-trophy {

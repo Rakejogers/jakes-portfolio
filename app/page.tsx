@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { HeroProjectIndex } from "@/components/hero-project-index";
 import { portfolioData } from "@/lib/portfolio-data";
 
 const Arrow = ({ diagonal = false }: { diagonal?: boolean }) => (
@@ -78,20 +77,6 @@ function ProjectDetails({ projectIndex }: { projectIndex: number }) {
 
 export default function Home() {
   const { profile, contact, education, experience, projects, skills } = portfolioData;
-  const heroProjects = projects.slice(0, 3).map((project, index) => {
-    const media = project.media[0];
-
-    return {
-      accolade: project.accolade,
-      description: project.description,
-      href: `#project-${index + 1}`,
-      image: {
-        alt: media.alt,
-        src: media.type === "image" ? media.src : "poster" in media ? media.poster : media.src,
-      },
-      title: project.title,
-    };
-  });
 
   return (
     <main>
@@ -114,8 +99,7 @@ export default function Home() {
         <div className="hero-grid">
           <div className="hero-copy">
             <h1>{profile.name}</h1>
-            <h2>{profile.headline}</h2>
-            <p>{profile.bio}</p>
+            <h2>{profile.bio}</h2>
             <div className="hero-actions">
               <a className="button button--primary" href="#work">
                 See my work
@@ -128,9 +112,16 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="hero-visual hero-visual--index">
-            <HeroProjectIndex projects={heroProjects} />
-          </div>
+          <figure className="hero-visual hero-portrait">
+            <Image
+              alt="Cartoon portrait of Jake coding at a desk"
+              className="hero-portrait__image"
+              fill
+              priority
+              sizes="(max-width: 720px) 82vw, (max-width: 980px) 19rem, 36vw"
+              src="/jake-at-work.png"
+            />
+          </figure>
         </div>
       </section>
 
