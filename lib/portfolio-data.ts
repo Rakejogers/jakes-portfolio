@@ -108,11 +108,11 @@ export const portfolioData = {
       company: "Hudl",
       dates: "May 2026 — Present",
       bullets: [
-        "Building product experiences inside the Hudl app and related frontends with a cross-functional engineering team.",
-        "Contributing to the parent experience, helping families stay connected to athlete activity, teams, and video workflows.",
-        "Working across modern frontend surfaces to ship user-facing features in a large-scale sports technology product.",
+        "Contributed to a net-new, end-to-end family relationship management feature across Hudl’s React Native mobile app, TypeScript web frontends, GraphQL API client, and C# backend service.",
+        "Built and released a cross-platform React/React Native component package supporting seven relationship states, with Storybook, Chromatic, internationalization, and unit tests.",
+        "Merged 20+ PRs across mobile, web, and backend repositories, delivering event profiles, parent permissions, invitation emails, responsive UI fixes, and account-management flows.",
       ],
-      tech: ["Frontend Engineering", "Product Development", "Mobile App", "Web Frontends"],
+      tech: ["React Native", "TypeScript", "GraphQL", "C#"],
     },
     {
       period: "Summer 2025",
