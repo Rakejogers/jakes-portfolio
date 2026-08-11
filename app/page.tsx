@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { portfolioData } from "@/lib/portfolio-data";
+import faviconHead from "./icon.png";
 
 const Arrow = ({ diagonal = false }: { diagonal?: boolean }) => (
   <svg
@@ -82,7 +83,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Jake Rogers, home">
-          JR
+          <Image alt="" priority sizes="2.75rem" src={faviconHead} />
         </a>
         <nav aria-label="Primary navigation">
           <a href="#work">Work</a>
@@ -177,7 +178,12 @@ export default function Home() {
           <SectionLabel number="03">Education</SectionLabel>
           <div className="education-body">
             <div className="uk-mark" aria-hidden="true">
-              UK
+              <Image
+                alt=""
+                height={522}
+                src="/university-of-kentucky-logo.png"
+                width={686}
+              />
             </div>
             <div className="education-title">
               <h3>{education.school}</h3>

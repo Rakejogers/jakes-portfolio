@@ -2,7 +2,8 @@
   --paper: #f3f0e8;
   --ink: #11110f;
   --muted: #5e5d56;
-  --lime: #c7ff3d;
+  --primary: #19468d;
+  --primary-contrast: #ffffff;
   --line: rgba(17, 17, 15, 0.52);
   --hairline: rgba(17, 17, 15, 0.18);
   --page-gutter: clamp(1.25rem, 4vw, 4rem);
@@ -27,8 +28,8 @@ body {
 }
 
 body::selection {
-  background: var(--lime);
-  color: var(--ink);
+  background: var(--primary);
+  color: var(--primary-contrast);
 }
 
 a {
@@ -64,10 +65,16 @@ a {
 }
 
 .brand {
-  width: fit-content;
-  font-size: 1.9rem;
-  font-weight: 800;
-  letter-spacing: -0.08em;
+  display: block;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.brand img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .site-header nav {
@@ -189,7 +196,8 @@ a:focus-visible > .arrow {
 }
 
 .button--primary {
-  background: var(--lime);
+  background: var(--primary);
+  color: var(--primary-contrast);
 }
 
 .button--secondary {
@@ -304,7 +312,8 @@ a:focus-visible > .arrow {
 .hero-project-index__list a:focus-visible,
 .hero-project-index__list a.is-active {
   padding-left: 0.7rem;
-  background: var(--lime);
+  background: var(--primary);
+  color: var(--primary-contrast);
 }
 
 .hero-project-index__list a:focus-visible {
@@ -410,7 +419,7 @@ a:focus-visible > .arrow {
   width: 0.5rem;
   height: 0.5rem;
   margin-right: 0.15rem;
-  background: var(--lime);
+  background: var(--primary);
   content: "";
 }
 
@@ -473,7 +482,7 @@ a:focus-visible > .arrow {
 
 .project-accolade {
   margin: 1.15rem 0 0;
-  color: #527300;
+  color: var(--primary);
   font-size: 0.88rem;
   font-weight: 650;
 }
@@ -545,7 +554,7 @@ a:focus-visible > .arrow {
 .project-rail a:hover,
 .project-rail a:focus-visible {
   padding-inline: 1rem;
-  background: color-mix(in srgb, var(--lime) 22%, transparent);
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
 }
 
 .experience-list {
@@ -640,15 +649,16 @@ a:focus-visible > .arrow {
 }
 
 .uk-mark {
-  display: grid;
-  width: 5rem;
-  height: 5rem;
-  place-items: center;
-  background: #153c9f;
-  color: white;
-  font-size: 1.55rem;
-  font-weight: 800;
-  letter-spacing: -0.08em;
+  display: flex;
+  width: 5.5rem;
+  min-height: 5rem;
+  align-items: flex-start;
+  padding-top: 0.15rem;
+}
+
+.uk-mark img {
+  width: 100%;
+  height: auto;
 }
 
 .education-title h3,
@@ -694,7 +704,7 @@ a:focus-visible > .arrow {
   width: 0.42rem;
   height: 0.42rem;
   margin-top: 0.45rem;
-  background: var(--lime);
+  background: var(--primary);
   content: "";
 }
 
@@ -964,13 +974,13 @@ a:focus-visible > .arrow {
   }
 
   .education-body {
-    grid-template-columns: 4rem 1fr;
+    grid-template-columns: 4.5rem 1fr;
     gap: 1.25rem;
   }
 
   .uk-mark {
-    width: 4rem;
-    height: 4rem;
+    width: 4.5rem;
+    min-height: 4rem;
   }
 
   .contact-grid {
